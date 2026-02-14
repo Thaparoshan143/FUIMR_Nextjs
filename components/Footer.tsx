@@ -2,6 +2,7 @@
 
 import { FaHeartbeat } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface IFotProps {
   oClassName?: string;
@@ -15,7 +16,12 @@ interface IFotItem {
 
 const Footer = ({ oClassName, children }: IFotProps) => {
   return (
-    <footer
+    <motion.footer
+      initial={{ y: "50%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      // viewport={{ once: false }}
+      transition={{ duration: 1 }}
       className={`min-h-[12vh] w-full text-center flex flex-col justify-around items-center py-6 ${oClassName}`}
     >
       {children}
@@ -28,7 +34,7 @@ const Footer = ({ oClassName, children }: IFotProps) => {
       <span className="text-s font-light">
         Powered by <b>Next.js</b> | Hosted on <b>Vercel</b>
       </span>
-    </footer>
+    </motion.footer>
   );
 };
 

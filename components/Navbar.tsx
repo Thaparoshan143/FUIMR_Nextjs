@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface INavProps {
   oClassName?: string;
@@ -12,11 +13,16 @@ interface INavItem {
 
 const Navbar = ({ oClassName, children }: INavProps) => {
   return (
-    <nav
+    <motion.nav
+      initial={{ y: "-50%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      // viewport={{ once: false }}
+      transition={{ duration: 0.5 }}
       className={`z-50 w-full flex flex-row justify-evenly items-center ${oClassName}`}
     >
       {children}
-    </nav>
+    </motion.nav>
   );
 };
 

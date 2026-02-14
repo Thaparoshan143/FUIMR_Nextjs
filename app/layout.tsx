@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body
+        className={`antialiased  bg-theme-light text-theme-dark dark:bg-theme-dark dark:text-theme-light`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
