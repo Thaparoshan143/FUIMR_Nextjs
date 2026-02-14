@@ -10,6 +10,7 @@
     "format": "prettier --write \"app/**/*.{jsx,js,tsx,ts,css,md}\" \"components/**/*.{jsx,js,tsx,ts,css,md}\""
   },
   "dependencies": {
+    "framer-motion": "^12.34.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
