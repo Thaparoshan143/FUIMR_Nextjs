@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <main
-      className={`relative min-h-screen w-screen flex flex-col justify-between items-center`}
+      className={`relative min-h-screen w-screen flex flex-col justify-center items-center`}
     >
       {/* <img src="/bg.png" className="absolute w-screen h-screen object-fill -z-10" /> */}
       <motion.section
